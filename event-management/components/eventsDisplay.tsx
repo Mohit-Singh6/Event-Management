@@ -8,14 +8,19 @@ interface EventProps {
     description: string,
     date: string,
     location: string,
+    image: string,
 }
 
 export default function EventsDisplay ({events}: {events: EventProps[]}) {
     return (
-        <div>
+        <div id="events">
+            <ul className="mt-10 flex flex-row flex-wrap gap-5">
             {events.map((eve) => (
-                <EventCard Event={eve} key={eve.id}/>
+                <li key={eve.id} className="list-none">
+                    <EventCard Event={eve} key={eve.id}/>
+                </li>
             ))}
+            </ul>
         </div>
     )
 }
