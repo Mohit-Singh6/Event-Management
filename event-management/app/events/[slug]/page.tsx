@@ -45,7 +45,7 @@ export default async function EventPage ({ params }: PageProps) {
                 <div>
                     <ul className="text-gray-300">
                         {event.agenda.map((ag: string) => (
-                            <li>{ag}</li>
+                            <li key={ag}>{ag}</li>
                         ))}
                     </ul>
                 </div>
