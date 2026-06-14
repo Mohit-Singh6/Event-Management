@@ -1,6 +1,5 @@
 import Explore from '../components/exploreNow';
 import EventsDisplay from '../components/eventsDisplay';
-import { cacheLife } from 'next/cache';
 
 export default async function Home () {
   
