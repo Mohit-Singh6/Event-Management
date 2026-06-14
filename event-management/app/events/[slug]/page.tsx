@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import BookEvent from '@/components/bookEvent';
 
+export const dynamic = 'force-dynamic';
+
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -62,31 +64,3 @@ export default async function EventPage ({ params }: PageProps) {
         </div>
     )
 }
-
-// {
-//   _id: '6a2cc4161bc227a657f720cb',
-//   title: 'AI Innovation Conference 2026',
-//   description: 'A conference dedicated to the latest breakthroughs in artificial intelligence, machine learning, and generative AI.',
-//   overview: 'Industry experts, researchers, and developers gather to discuss cutting-edge AI technologies, real-world applications, ethical considerations,and the future of intelligent systems.',
-//   image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=2340&q=80',
-//   venue: 'Bengaluru International Exhibition Centre',
-//   location: 'Bengaluru, India',
-//   date: '2026-07-15',
-//   time: '09:30',
-//   mode: 'hybrid',
-//   audience: 'AI engineers, data scientists, researchers, students',
-//   agenda: [
-//     '09:30 AM - 10:30 AM | Opening Keynote: State of AI',
-//     '10:45 AM - 12:00 PM | Generative AI in Production',
-//     '12:00 PM - 01:00 PM | Lunch Break',
-//     '01:00 PM - 02:30 PM | AI Ethics and Regulation',
-//     '02:45 PM - 04:00 PM | Building AI-Powered Applications',
-//     '04:15 PM - 05:00 PM | Networking Session'
-//   ],
-//   organizer: 'AI Nexus hosts conferences that bring together innovators and practitioners from across the AI ecosystem.',
-//   tags: [ 'AI', 'Machine Learning', 'Data Science','Generative AI' ],
-//   createdAt: '2026-06-13T02:44:38.385Z',
-//   updatedAt: '2026-06-13T02:44:38.385Z',
-//   slug: 'ai-innovation-conference-2026',
-//   __v: 0
-// }
