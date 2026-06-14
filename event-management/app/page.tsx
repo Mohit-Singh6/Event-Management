@@ -3,8 +3,6 @@ import EventsDisplay from '../components/eventsDisplay';
 import { cacheLife } from 'next/cache';
 
 export default async function Home () {
-  'use cache';
-  cacheLife('hours');
   
   const events = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/events`).then(res => res.json());
   console.log('Fetched events:', events.events);
