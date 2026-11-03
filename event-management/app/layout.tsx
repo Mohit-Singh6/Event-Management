@@ -1,3 +1,4 @@
+import { HealixAutoErrorBoundary } from "./healix-error-boundary";
 import type { Metadata } from "next";
 import { Schibsted_Grotesk, Martian_Mono } from "next/font/google";
 import "./globals.css";
@@ -46,7 +47,7 @@ export default function RootLayout({
           </div>
 
           <main>
-            {children}
+            <HealixAutoErrorBoundary>{children}</HealixAutoErrorBoundary>
           </main>
       </body>
     </html>
